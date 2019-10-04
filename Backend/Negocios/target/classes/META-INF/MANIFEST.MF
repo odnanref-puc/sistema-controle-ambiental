@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Implementation-Title: Sistema de Controle Ambiental - Negocios e Comun
+ icacao
+Implementation-Version: 1.0.0
+Built-By: Fernando
+Implementation-Vendor-Id: Negocios
+Build-Jdk: 1.8.0_171
+Implementation-URL: http://projects.spring.io/spring-boot/Negocios/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: br.edu.puc.sca.Main
+

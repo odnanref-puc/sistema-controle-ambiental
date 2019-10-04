@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-11">
+    <h2 class="page-header">
+      Ativos
+    </h2>
+  </div>
+</div>
+
+<table class="table" [hidden]="!ativos?.length" style="width: 80%;">
+  <tr *ngFor="let ativo of ativos">
+    <td>{{ativo.id}}</td>
+    <td>{{ativo.nome}}</td>
+    <td>{{ativo.marca}}</td>
+    <td>{{ativo.modelo}}</td>
+  </tr>
+</table>
+
+<p style="text-align: center; font-style: italic;" [hidden]="ativos?.length"> Não foram encontrados ativos nesta produção.</p>

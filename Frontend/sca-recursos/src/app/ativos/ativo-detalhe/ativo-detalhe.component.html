@@ -1,0 +1,125 @@
+<div class="container">
+
+      <div class="row" style="margin-top: 15px">
+         <sca-back-forward></sca-back-forward>
+      </div>
+
+
+      <section class="content">
+        <section class="invoice">
+          <form [formGroup]="ativoForm" (ngSubmit)="onSubmit()" novalidate>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h2 class="page-header">
+                      <i class="fa fa-university"></i> {{titulo}}
+                    </h2>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12">
+                    <span class="help-block pull-right has-error-block" *ngIf="mensagem != undefined"><i class="fa fa-check"></i> {{mensagem}} </span>
+                  </div>
+                  <input class="form-control" formControlName="id" type="hidden">
+                  <div class="col-sm-6 col-xs-12">
+                      <sca-input-container successMessage="Ok" errorMessage="Obrigatório e mínimo 3 caracteres" label="Nome">
+                         <input class="form-control" formControlName="nome" autocomplete="off" placeholder="Nome">
+                      </sca-input-container>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <sca-input-container successMessage="Ok" errorMessage="Marca inválida" label="Marca">
+                       <input class="form-control" formControlName="marca" autocomplete="off" placeholder="Marca">
+                    </sca-input-container>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <sca-input-container successMessage="Ok" errorMessage="Modelo inválido" label="Modelo">
+                       <input class="form-control" formControlName="modelo" autocomplete="off" placeholder="Modelo">
+                    </sca-input-container>
+                  </div>
+                </div>
+
+
+
+                <div class="row">
+                  <div class="col-sm-3 col-xs-6">
+                      <sca-input-container successMessage="Ok" errorMessage="Fabricante inválido" label="Fabricante">
+                         <input class="form-control" formControlName="fabricante" autocomplete="off" placeholder="Fabricante">
+                      </sca-input-container>
+                  </div>
+
+                  <ng-template #tpl let-date="date" let-currentMonth="currentMonth" let-selected="selected">
+                            <div class="day"
+                            [class.selected]="selected"
+                            [class.greyed]="date.month !== currentMonth"> {{ date.day }} </div>
+                 </ng-template>
+
+                  <div class="col-sm-3 col-xs-6">
+                      <sca-input-container successMessage="Ok" errorMessage="Data inválida" label="Data de aquisição">
+                         <input [dayTemplate]="tpl" class="form-control" formControlName="data_aquisicao" placeholder="Data de aquisição" (click)="picker.toggle()" ngbDatepicker #picker="ngbDatepicker" autocomplete="off">
+                      </sca-input-container>
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                    <sca-input-container successMessage="Ok" errorMessage="Garantia inválida" label="Garantia">
+                       <input class="form-control" formControlName="tempo_garantia" autocomplete="off" placeholder="Tempo de garantia (dias)">
+                    </sca-input-container>
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                    <sca-input-container successMessage="Ok" errorMessage="Vida útil inválida" label="Vida útil">
+                       <input class="form-control" formControlName="vida_util" autocomplete="off" placeholder="Vida útil (dias)">
+                    </sca-input-container>
+                  </div>
+
+                </div>
+
+
+                <div class="row">
+                  <div class="col-sm-3 col-xs-6">
+                    <sca-input-container successMessage="Ok" errorMessage="Valor inválido" label="Valor de aquisição">
+                       <input class="form-control" formControlName="valor_aquisicao" autocomplete="off" placeholder="Valor de aquisição">
+                    </sca-input-container>
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                    <sca-input-container successMessage="Ok" errorMessage="Valor inválido" label="Valor residual">
+                       <input class="form-control" formControlName="valor_residual" autocomplete="off" placeholder="Valor residual">
+                    </sca-input-container>
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="form-group">
+                      <sca-combo [options]="tipoOpcoes" formControlName="tipo"></sca-combo>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                      <div class="form-group">
+                        <sca-radio [options]="situacaoOpcoes" formControlName="situacao"></sca-radio>
+                      </div>
+                  </div>
+                </div>
+
+
+              <div class="row">
+                  <div class="col-sm-9 col-xs-12">
+                      <div class="form-group">
+                        <textarea class="form-control" rows="3" formControlName="descricao" placeholder="Descrição"></textarea>
+                      </div>
+                  </div>
+              </div>
+
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <input [disabled]="ativoForm.invalid" class="btn btn-success pull-right" type="submit" name="Salvar">
+                  </div>
+                </div>
+
+              </form>
+
+          </section>
+      </section>
+</div>

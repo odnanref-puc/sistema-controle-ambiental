@@ -1,0 +1,83 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+
+  <div class="row" style="margin-top: 15px">
+     <sca-back-forward></sca-back-forward>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-11">
+      <h2 class="page-header">
+        Produção Diária
+      </h2>
+    </div>
+  </div>
+
+
+  <ng-template #tpl let-date="date" let-currentMonth="currentMonth" let-selected="selected">
+      <div class="day"
+      [class.selected]="selected"
+      [class.greyed]="date.month !== currentMonth"> {{ date.day }} </div>
+  </ng-template>
+
+  <form [formGroup]="producaoForm" novalidate>
+
+      <div class="row" style="margin-bottom: 30px;">
+
+        <div class="col-sm-3 col-xs-3"></div>
+
+        <div class="col-sm-3 col-xs-4">
+            <input style="width: 95%" class="form-control" awesomeTooltip="Data inicial" [dayTemplate]="tpl" formControlName="data_inicial" placeholder="Data inicial" (click)="data_inicial.toggle()" ngbDatepicker #data_inicial="ngbDatepicker" autocomplete="off">
+        </div>
+
+        <div class="col-sm-3 col-xs-4">
+          <div class="input-group">
+            <input style="width: 95%" class="form-control" awesomeTooltip="Data final" [dayTemplate]="tpl" formControlName="data_final" placeholder="Data final" (click)="data_final.toggle()" ngbDatepicker #data_final="ngbDatepicker" autocomplete="off">
+            <span class="input-group-btn">
+              <i class="fa fa-search" aria-hidden="true" style="color: #4682B4; cursor: pointer; font-size: 20px;" (click)="producaoByMinaAndPeriodo()"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-xs-3"></div>
+
+      </div>
+
+  </form>
+
+
+
+
+  <table class="table table-bordered table-striped">
+		<thead class="header-table">
+		<tr>
+      <td>CÓDIGO</td>
+  		<td>DATA</td>
+  		<td>MINÉRIO</td>
+  		<td>EXTRAÇÃO</td>
+      <td>ESTOCAGEM</td>
+      <td>EMBARQUE</td>
+      <td class="text-center">DETALHE</td>
+		</tr>
+		</thead>
+		<tbody>
+		<tr *ngFor="let producao of producoes | paginate: { id: 'listing_pagination',
+                                                      itemsPerPage: 3,
+                                                      currentPage: page,
+                                                      totalItems: totalRec }; let i = index">
+      <td>{{producao.id}}</td>
+      <td>{{producao.data | date: 'yyyy-MM-dd'}}</td>
+  	  <td>{{producao.minerio}}</td>
+  	  <td>{{producao.qde_etapa_extracao}}</td>
+      <td>{{producao.qde_etapa_estocagem}}</td>
+      <td>{{producao.qde_etapa_embarque}}</td>
+      <td class="text-center"><i class="fa fa-cogs" style="color: #A52A2A; cursor: pointer; font-size: 17px;" [routerLink]="['/producao_detalhe', producao.id]"></i></td>
+		</tr>
+		</tbody>
+	</table>
+  <div>
+		<pagination-controls  id="listing_pagination" autoHide="true" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+	</div>
+
+</div>

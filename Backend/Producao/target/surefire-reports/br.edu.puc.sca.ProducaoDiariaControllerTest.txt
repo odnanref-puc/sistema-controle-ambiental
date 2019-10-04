@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.edu.puc.sca.ProducaoDiariaControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.476 sec - in br.edu.puc.sca.ProducaoDiariaControllerTest

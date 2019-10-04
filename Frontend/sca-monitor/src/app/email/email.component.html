@@ -1,0 +1,50 @@
+<div class="container">
+
+    <div class="row" style="margin-top: 15px">
+      <sca-back-forward></sca-back-forward>
+    </div>
+
+      <section class="content">
+        <section class="invoice">
+          <form [formGroup]="emailForm" (ngSubmit)="onSubmit()" novalidate>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h2 class="page-header">
+                      <i class="fa fa-university"></i> {{titulo}}
+                    </h2>
+                  </div>
+                </div>
+
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-12">
+                    <span class="help-block pull-right has-error-block" *ngIf="mensagem != undefined"><i class="fa fa-check"></i> {{mensagem}} </span>
+                  </div>
+
+                  <div class="col-sm-6 col-xs-12">
+                      <sca-input-container successMessage="Ok" errorMessage="Mínimo 3 caracteres" label="Assunto">
+                         <input class="form-control" formControlName="assunto" autocomplete="off" placeholder="Assunto">
+                      </sca-input-container>
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-9 col-xs-12">
+                        <div class="form-group">
+                          <textarea class="form-control" rows="5" formControlName="mensagem" placeholder="Mensagem"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <input [disabled]="emailForm.invalid" class="btn btn-success pull-right" type="submit" name="Enviar">
+                  </div>
+                </div>
+
+              </form>
+
+          </section>
+      </section>
+</div>

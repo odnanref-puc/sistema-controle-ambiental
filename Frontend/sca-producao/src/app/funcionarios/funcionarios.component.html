@@ -1,0 +1,18 @@
+
+  <div class="row">
+    <div class="col-xs-11">
+      <h2 class="page-header">
+        Colaboradores
+      </h2>
+    </div>
+  </div>
+
+  <table class="table"  [hidden]="!funcionarios?.length" style="width: 80%;">
+		<tr *ngFor="let funcionario of funcionarios">
+  	  <td>{{funcionario.id}}</td>
+  	  <td>{{funcionario.nome}}</td>
+  	  <td>{{funcionario.cargo}}</td>
+		</tr>
+	</table>
+
+  <p style="text-align: center; font-style: italic;" [hidden]="funcionarios?.length"> Não foram encontrados colaboradores nesta produção.</p>

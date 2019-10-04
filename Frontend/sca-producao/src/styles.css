@@ -1,0 +1,28 @@
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+.header-table{
+  font-weight:bold;
+}
+
+.ngb-dp-month:last-child .ngb-dp-weekday {
+  color: green;
+}
+
+.day {
+  text-align: center;
+
+}
+
+.day.selected, .day.selected:hover {
+  background-color: #428bca;
+  color: white;
+}
+
+.day.greyed {
+  color: #bbbbbb;
+}
+
+.day:hover {
+  background-color: lightsalmon;
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+<div class="container">
+
+      <div class="row" style="margin-top: 15px">
+         <sca-back-forward></sca-back-forward>
+      </div>
+
+      <section class="content">
+          <section class="invoice">
+
+            <div class="row">
+              <div class="col-sm-12 col-xs-12">
+                <h2 class="page-header">
+                  <i class="fa fa-cogs" style="margin-right: 7px"></i> {{titulo}}
+                </h2>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-3 col-xs-6">
+                  <b>Código:</b> {{producao?.id}}
+              </div>
+              <div class="col-sm-3 col-xs-6">
+                  <b>Minério:</b> {{producao?.minerio}}
+              </div>
+              <div class="col-sm-3 col-xs-6">
+                  <b>Data:</b> {{producao?.data | date: 'yyyy-MM-dd'}}
+              </div>
+              <div class="col-sm-3 col-xs-6">
+                  <b>Unidade:</b> Kilogramas
+              </div>
+            </div>
+
+            <sca-processo [processo_producao]="producao"> </sca-processo>
+
+            <sca-ativos></sca-ativos>
+
+            <sca-funcionarios></sca-funcionarios>
+
+          </section>
+      </section>
+</div>

@@ -1,0 +1,50 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+
+  <div class="row" style="margin-top: 15px">
+     <sca-back-forward></sca-back-forward>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-11">
+      <h2 class="page-header">
+        Monitoramento de Minas
+      </h2>
+    </div>
+  </div>
+
+
+
+  <table class="table table-bordered table-striped">
+		<thead class="header-table">
+		<tr>
+		<td>CÓDIGO</td>
+		<td>NOME</td>
+		<td>CIDADE</td>
+    <td>ESTADO</td>
+    <td>INÍCIO OPERAÇÃO</td>
+    <td class="text-center">PROCESSO</td>
+    <td class="text-center">PRODUÇÃO</td>
+		</tr>
+		</thead>
+		<tbody>
+		<tr *ngFor="let mina of minas | paginate: { id: 'listing_pagination',
+                                                      itemsPerPage: 3,
+                                                      currentPage: page,
+                                                      totalItems: totalRec }; let i = index">
+	  <td>{{mina.id}}</td>
+	  <td>{{mina.nome}}</td>
+	  <td>{{mina.cidade}}</td>
+    <td>{{mina.estado}}</td>
+    <td>{{mina.inicio_operacao | date: 'yyyy-MM-dd'}}</td>
+    <td class="text-center"><i class="fa fa-sitemap" style="color: #4682B4; cursor: pointer; font-size: 17px;" [routerLink]="['/mina_detalhe', mina.id]"></i></td>
+    <td class="text-center"><i class="fa fa-cogs" style="color: #A52A2A; cursor: pointer; font-size: 17px;" [routerLink]="['/producao', mina.id]"></i></td>
+		</tr>
+		</tbody>
+	</table>
+  <div>
+		<pagination-controls  id="listing_pagination" autoHide="true" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+	</div>
+
+</div>

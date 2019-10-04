@@ -1,0 +1,81 @@
+<div class="container">
+
+      <div class="row" style="margin-top: 15px">
+         <sca-back-forward></sca-back-forward>
+      </div>
+
+      <section class="content">
+        <section class="invoice">
+          <form [formGroup]="minaForm" novalidate>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h2 class="page-header">
+                      <i class="fa fa-university"></i> {{titulo}}
+                    </h2>
+                  </div>
+                </div>
+
+                <div *ngIf="mina">
+                   <sca-mina-processo [situacao]="mina.situacao"></sca-mina-processo>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-3 col-xs-6">
+                      <input class="form-control" formControlName="id" autocomplete="off" placeholder="Código" awesomeTooltip="Código">
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                      <input class="form-control" formControlName="nome" autocomplete="off" placeholder="Nome" awesomeTooltip="Nome">
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                     <input class="form-control" formControlName="latitude" autocomplete="off" placeholder="Latitude" awesomeTooltip="Latitude">
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                     <input class="form-control" formControlName="longitude" autocomplete="off" placeholder="Longitude" awesomeTooltip="Longitude">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-3 col-xs-6">
+                      <input class="form-control" formControlName="bairro" autocomplete="off" placeholder="Bairro" awesomeTooltip="Bairro">
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                      <input class="form-control" formControlName="cidade" autocomplete="off" placeholder="Cidade" awesomeTooltip="Cidade">
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                      <input class="form-control" formControlName="estado" autocomplete="off" placeholder="Estado" awesomeTooltip="Estado">
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                      <input class="form-control" formControlName="pais" autocomplete="off" placeholder="Pais" awesomeTooltip="Pais">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-3 col-xs-6">
+                      <input class="form-control" formControlName="inicio_operacao" autocomplete="off" placeholder="Inicio da operacao" awesomeTooltip="Inicio da operacao">
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                      <input class="form-control" formControlName="fim_operacao" autocomplete="off" placeholder="Fim da operacao" awesomeTooltip="Fim da operacao">
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                     <input class="form-control" formControlName="capacidade_prevista" autocomplete="off" placeholder="Capacidade prevista" awesomeTooltip="Capacidade prevista">
+                  </div>
+
+                  <div class="col-sm-3 col-xs-6">
+                      <input class="form-control" formControlName="situacao" autocomplete="off" placeholder="Situação" awesomeTooltip="Situação">
+                  </div>
+                </div>
+
+              </form>
+
+          </section>
+      </section>
+</div>

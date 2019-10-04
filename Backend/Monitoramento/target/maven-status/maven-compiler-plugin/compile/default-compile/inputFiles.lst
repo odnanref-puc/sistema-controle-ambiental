@@ -1,0 +1,16 @@
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\model\DadosSensor.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\mq\SensorConsumer.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\repository\SensorRepository.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\Main.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\model\Sensor.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\repository\DadosSensorRepository.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\repository\custom\CustomRepository.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\controller\DadosSensorController.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\exception\ExceptionHandler.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\repository\SensorCustomRepository.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\repository\custom\SensorCustomRepositoryImpl.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\controller\SensorController.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\retorno\Resultado.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\bean\SensorLastest.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\retorno\Mensagem.java
+C:\Users\Fernando\workspace_spring_boot\Monitoramento\src\main\java\br\edu\puc\sca\util\Utilidade.java

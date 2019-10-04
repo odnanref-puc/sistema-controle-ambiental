@@ -1,0 +1,51 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+
+  <div class="row" style="margin-top: 15px">
+     <sca-back-forward></sca-back-forward>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-11">
+      <h2 class="page-header">
+        Gerenciamento de Ativos
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+        <i [routerLink]="['/ativos', 'add']" style="color: green; font-size: 22px; cursor: pointer;" class="glyphicon glyphicon-plus pull-right"></i>
+    </div>
+  </div>
+
+  <table class="table table-bordered table-striped">
+		<thead class="header-table">
+		<tr>
+		<td>CÓDIGO</td>
+		<td>NOME</td>
+		<td>MARCA</td>
+    <td>MODELO</td>
+    <td colspan="2"></td>
+		</tr>
+		</thead>
+		<tbody>
+		<tr *ngFor="let ativo of ativos | paginate: { id: 'listing_pagination',
+                                                      itemsPerPage: 3,
+                                                      currentPage: page,
+                                                      totalItems: totalRec }; let i = index">
+	  <td>{{ativo.id}}</td>
+	  <td>{{ativo.nome}}</td>
+	  <td>{{ativo.marca}}</td>
+    <td>{{ativo.modelo}}</td>
+    <td><i class="glyphicon glyphicon-edit" style="color: #4682B4; cursor: pointer; font-size: 17px;" [routerLink]="['/ativos', ativo.id]"></i></td>
+    <td><i class="glyphicon glyphicon-remove" style="color: #A52A2A; cursor: pointer; font-size: 17px;" (click)="excluirAtivo(ativo)"></i></td>
+		</tr>
+		</tbody>
+	</table>
+  <div>
+		<pagination-controls  id="listing_pagination" autoHide="true" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+	</div>
+
+</div>
