@@ -1,0 +1,172 @@
+version: '3'
+volumes:
+   dados_monitor:
+   dados_negocios:
+   dados_recursos:
+   dados_producao:
+networks:
+   monitoramento:
+   negocios:
+   servicosexternos:
+   recursos:
+   producao:
+   gateway:
+   fila:
+services:
+   queue:
+      image: vromero/activemq-artemis
+      ports:
+         - 8161:8161
+         - 61616:61616
+      networks:
+         - fila
+      environment:
+         - ARTEMIS_USERNAME=admin
+         - ARTEMIS_PASSWORD=admin
+
+   api_gateway:
+      image: nginx:1.13
+      volumes:
+         - ./nginx/web:/usr/share/nginx/html
+         - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      ports:
+         - 80:80
+      networks:
+         - monitoramento
+         - negocios
+         - recursos
+         - producao
+         - gateway
+      depends_on:
+         - monitoramento_svc
+         - negocios_svc
+         - recursos_svc
+         - producao_svc
+
+   monitoramento_db:
+      image: postgres:9.6
+      volumes:
+         - dados_monitor:/var/lib/postgresql/data
+         - ./monitor/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+      networks:
+         - monitoramento
+
+   monitoramento_svc:
+      image: openjdk:8-jdk-alpine
+      volumes:
+         - /tmp
+         - ./monitor/service/monitoramento.jar:/service/monitoramento.jar
+      command: java -jar /service/monitoramento.jar
+      networks:
+         - monitoramento
+         - fila
+      depends_on:
+         - queue
+         - monitoramento_db
+
+   monitoramento_web:
+      image: tomcat
+      volumes:
+         - ./monitor/web:/usr/local/tomcat/webapps/monitor
+      ports:
+         - 81:8080
+      networks:
+         - monitoramento
+         - gateway
+      depends_on:
+         - monitoramento_svc
+
+   negocios_db:
+      image: postgres:9.6
+      volumes:
+         - dados_negocios:/var/lib/postgresql/data
+         - ./negocios/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+      networks:
+         - negocios
+
+   negocios_svc:
+      image: openjdk:8-jdk-alpine
+      volumes:
+         - /tmp
+         - ./negocios/service/negocios.jar:/service/negocios.jar
+      command: java -jar /service/negocios.jar
+      networks:
+         - negocios
+         - fila
+      depends_on:
+         - queue
+         - negocios_db
+
+   servicosexternos_svc:
+      image: openjdk:8-jdk-alpine
+      volumes:
+         - /tmp
+         - ./servicosexternos/service/servicosexternos.jar:/service/servicosexternos.jar
+      command: java -jar /service/servicosexternos.jar
+      networks:
+         - servicosexternos
+         - fila
+      depends_on:
+         - queue
+
+   recursos_db:
+      image: postgres:9.6
+      volumes:
+         - dados_recursos:/var/lib/postgresql/data
+         - ./recursos/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+      networks:
+         - recursos
+
+   recursos_svc:
+      image: openjdk:8-jdk-alpine
+      volumes:
+         - /tmp
+         - ./recursos/service/recursos.jar:/service/recursos.jar
+      command: java -jar /service/recursos.jar
+      networks:
+         - recursos
+      depends_on:
+         - recursos_db
+
+   recursos_web:
+      image: tomcat
+      volumes:
+         - ./recursos/web:/usr/local/tomcat/webapps/recursos
+      ports:
+         - 82:8080
+      networks:
+         - recursos
+         - gateway
+      depends_on:
+         - recursos_svc
+
+   producao_db:
+      image: postgres:9.6
+      volumes:
+         - dados_producao:/var/lib/postgresql/data
+         - ./producao/scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+      networks:
+         - producao
+
+   producao_svc:
+      image: openjdk:8-jdk-alpine
+      volumes:
+         - /tmp
+         - ./producao/service/producao.jar:/service/producao.jar
+      command: java -jar /service/producao.jar
+      networks:
+         - producao
+      depends_on:
+         - producao_db
+
+   producao_web:
+      image: tomcat
+      volumes:
+         - ./producao/web:/usr/local/tomcat/webapps/producao
+      ports:
+         - 83:8080
+      networks:
+         - producao
+         - gateway
+      depends_on:
+         - producao_svc

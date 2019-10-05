@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900px" height="70px" viewBox="-2 -10 900 60" content="&lt;mxfile modified=&quot;2019-09-04T01:01:02.908Z&quot; host=&quot;www.draw.io&quot; agent=&quot;Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36&quot; etag=&quot;FlLwgy6FbqpfERVepv0B&quot; pages=&quot;1&quot; version=&quot;11.2.5&quot; type=&quot;google&quot;&gt;&lt;diagram id=&quot;3aEkdobxLOvo4VI8XftH&quot; name=&quot;Page-1&quot;&gt;7VnLdtowEP0als3Bll8swTYpbdpwgDzancCKrVa2OEIE06+vhGVsx5DSpsGBExaguZqRpZm5MwJawI3TSwbn0RcaINLS20HaAl5L1zWtrYsPiawzxARmBoQMB0qpAMb4F1JgW6FLHKBFRZFTSjieV8EZTRI04xUMMkZXVbUHSqpPncMQ1YDxDJI6eocDHmWoo9sF/hHhMMqfrFmdbCaGubI6ySKCAV2VIOC3gMso5dkoTl1EpPNyv2R2/T2z240xlPBDDC5xV/vkfO6T5fWMTlK7d8d7H9QqC77OD4wCcX4lUsYjGtIEEr9Ae4wukwDJVTUhFTpXlM4V+ANxvlbBhEtOBRTxmKjZB5pwNanpSnYpoWyzAwAMo2eDXE9tRdotOKM/UUlT7xi67UlNTEgJ972+03cFHjIYYFRZ/WHzEnPZyeVx9zo09w5dshl6xosqxzlkIeLPeRts4y4Ig2iMOFsLQ4YI5PixuhGoMjfc6hXBFQMV37+ItdrlIyRL9aTB1/6o648no5vJzahbSwWRsXM5RCmvhb0UzlWEORrP4cZFK1EGdoTuSYACEzmBsSukjj4FlrUNzyNiHKXPB6juT2UAOspE1R5bMXFVEFkDCotKJDbbrxQB0ATbhLPY+l4I7Vz4JoULMxe9tDzprZV0diw1DmRpp0mSGjWS7qVlnIay515M53FyocBy4CV3sOhkV3CKyJAuMMc0EXNTyjmNSwpdgkM5EeMg2OQcVMBM+BiJiPTmiGFxPjn2xCFE80XDAurRJSc4ETHPe3C7AIW04DAJIAtkcqzjKZUbDFGCGCS1BG8yy15UbPILS15rzFqtMXaUGuO1So15SqUGpZjf52uIcclKSIWRFM62PNkHlifrheVJmQ4pFjsspa9tVxIYGDIClVWyIyjDJ/m53cm/p6x1hqUPJZWqJ2xinEBeZ9vJ1j3HrOZN04XPrmWR54+7k8Ftt+WClmNv3sH1a152/4NXrU7nbV1dnVPqJ2fXGzoH9gZtT1Yd5+7aqVFvOLoeD333aMxr5Gum/caomt9E37naCFe1/GfKP5FVb5Kr+S5LZO3edq8Gx+uSjXBVB9YbI2v9kvtO1iOSFRxIVrtRsoJdndW7ecLVtnyKbhFJzSkTo1CO3Osv/sgdCG5/P6krsGkcjapCLP6Hyb7OFv9mAf83&lt;/diagram&gt;&lt;/mxfile&gt;" style="background-color: rgb(255, 255, 255);">
+	<defs>
+		<linearGradient x1="0%" y1="0%" x2="0%" y2="100%" id="mx-gradient-edf8fc-1-ffffff-1-s-0">
+			<stop offset="0%" style="stop-color:#EDF8FC"/>
+			<stop offset="100%" style="stop-color:#ffffff"/>
+		</linearGradient>
+	</defs>
+	<g>
+		<path d="M 511 25 L 521 25 Q 531 25 523.5 25 L 519.75 25 Q 516 25 522.82 25 L 529.63 25" fill="none" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<path d="M 534.88 25 L 527.88 28.5 L 529.63 25 L 527.88 21.5 Z" fill="#29427d" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<rect x="381" y="0" width="130" height="50" rx="7.5" ry="7.5" fill="#d5e8d4" stroke="#82b366" pointer-events="none"/>
+		<g transform="translate(390.5,18.5)">
+			<switch>
+				<foreignObject style="overflow:visible;" pointer-events="all" width="110" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+					<div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #29427d; line-height: 1.2; vertical-align: top; width: 112px; white-space: nowrap; overflow-wrap: normal; text-align: center;">
+						<div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">INFRAESTRUTURA</div>
+					</div>
+				</foreignObject>
+				<text x="55" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">INFRAESTRUTURA</text>
+			</switch>
+		</g>
+		<path d="M 40 25 L 50 25 Q 60 25 54.5 25 L 51.75 25 Q 49 25 55.82 25 L 62.63 25" fill="none" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<path d="M 67.88 25 L 60.88 28.5 L 62.63 25 L 60.88 21.5 Z" fill="#29427d" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<ellipse cx="20" cy="25" rx="20" ry="20" fill="#ffffff" stroke="#29427d" pointer-events="none"/>
+		<path d="M 819 25 L 840.63 25" fill="none" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<path d="M 845.88 25 L 838.88 28.5 L 840.63 25 L 838.88 21.5 Z" fill="#29427d" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<ellipse cx="867" cy="25" rx="20" ry="20" fill="#ffffff" stroke="#29427d" stroke-width="3" pointer-events="none"/>
+		<ellipse cx="867" cy="25" rx="18" ry="18" fill="#29427d" stroke="#edf8fc" pointer-events="none"/>
+		<rect x="689" y="0" width="130" height="50" rx="7.5" ry="7.5" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+		<g transform="translate(710.5,18.5)">
+			<switch>
+				<foreignObject style="overflow:visible;" pointer-events="all" width="86" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+					<div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #29427d; line-height: 1.2; vertical-align: top; width: 86px; white-space: nowrap; overflow-wrap: normal; text-align: center;">
+						<div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">DESATIVAÇÃO</div>
+					</div>
+				</foreignObject>
+				<text x="43" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">DESATIVAÇÃO</text>
+			</switch>
+		</g>
+		<path d="M 199 25 L 209 25 Q 219 25 212.5 25 L 209.25 25 Q 206 25 212.82 25 L 219.63 25" fill="none" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<path d="M 224.88 25 L 217.88 28.5 L 219.63 25 L 217.88 21.5 Z" fill="#29427d" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<rect x="69" y="0" width="130" height="50" rx="7.5" ry="7.5" fill="#d5e8d4" stroke="#82b366" pointer-events="none"/>
+		<g transform="translate(90.5,18.5)">
+			<switch>
+				<foreignObject style="overflow:visible;" pointer-events="all" width="86" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+					<div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #29427d; line-height: 1.2; vertical-align: top; width: 86px; white-space: nowrap; overflow-wrap: normal; text-align: center;">
+						<div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">PROSPECÇÃO</div>
+					</div>
+				</foreignObject>
+				<text x="43" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">PROSPECÇÃO</text>
+			</switch>
+		</g>
+		<path d="M 356 25 L 366 25 Q 376 25 368.5 25 L 364.75 25 Q 361 25 367.82 25 L 374.63 25" fill="none" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<path d="M 379.88 25 L 372.88 28.5 L 374.63 25 L 372.88 21.5 Z" fill="#29427d" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<rect x="226" y="0" width="130" height="50" rx="7.5" ry="7.5" fill="#d5e8d4" stroke="#82b366" pointer-events="none"/>
+		<g transform="translate(255.5,18.5)">
+			<switch>
+				<foreignObject style="overflow:visible;" pointer-events="all" width="70" height="12" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+					<div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #29427d; line-height: 1.2; vertical-align: top; width: 70px; white-space: nowrap; overflow-wrap: normal; text-align: center;">
+						<div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">AVALIAÇÃO</div>
+					</div>
+				</foreignObject>
+				<text x="35" y="12" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">AVALIAÇÃO</text>
+			</switch>
+		</g>
+		<path d="M 666 25 L 676 25 Q 686 25 677.5 25 L 673.25 25 Q 669 25 675.82 25 L 682.63 25" fill="none" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<path d="M 687.88 25 L 680.88 28.5 L 682.63 25 L 680.88 21.5 Z" fill="#29427d" stroke="#29427d" stroke-miterlimit="10" pointer-events="none"/>
+		<rect x="536" y="0" width="130" height="50" rx="7.5" ry="7.5" fill="#ffffff" stroke="#000000" pointer-events="none"/>
+		<g transform="translate(541.5,11.5)">
+			<switch>
+				<foreignObject style="overflow:visible;" pointer-events="all" width="118" height="26" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+					<div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #29427d; line-height: 1.2; vertical-align: top; width: 120px; white-space: nowrap; overflow-wrap: normal; text-align: center;">
+						<div xmlns="http://www.w3.org/1999/xhtml" style="display:inline-block;text-align:inherit;text-decoration:inherit;white-space:normal;">PRODUÇÃO /<br />COMERCIALIZAÇÃO</div>
+					</div>
+				</foreignObject>
+				<text x="59" y="19" fill="#000000" text-anchor="middle" font-size="12px" font-family="Helvetica" font-weight="bold">PRODUÇÃO /&lt;br&gt;COMERCIALIZAÇÃO</text>
+			</switch>
+		</g>
+	</g>
+</svg>
